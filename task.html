@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.css">
+    <title>Admin | Portal</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand ml-2" href="#">
+            <img src="images/pilchi-logo-copy.png" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- <div class="collapse navbar-collapse justify-content-end nav-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Follow Us</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="https://www.facebook.com/klickzonesph" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="https://twitter.com/klickzones" target="_blank"><i class="fab fa-twitter"></i></a>
+                </li>
+            </ul>
+        </div>  -->
+    </nav>
+    
+    <div class=" sidebar-adjust">
+        <div class="sidebar pt-5" id="sidebar-menu">
+            <a href="index.html" class="nav-link link" id="link"><i class="fas fa-box-open mr-2"></i><span id="dash">Dashboard</span></a>
+            <a href="task.html" class="nav-link link active" id="link1"><i class="fas fa-plus-circle mr-2"></i><span id="users">Tasks</span></a>
+            <a href="departments.html" class="nav-link link" id="link3"><i class="fas fa-industry mr-2"></i><span id="act">Department</span></a>
+            <a href="user.html" class="nav-link link" id="link2"><i class="fas fa-users mr-2"></i><span id="msg">Users</span></a>
+            <a href="#" class="nav-link link" id="link4"><i class="far fa-chart-bar mr-2"></i><span id="report">Reports</span></a>
+            <hr class="divider"/>
+            <div class="text-center">
+                <a class="rounded-circle f-size" href="#" id="toggleLeft" onclick="toggleSlide()"><i class="fas fa-chevron-circle-left"></i></a>
+                <a class="rounded-circle f-size d-none" href="#" id="toggleRight" onclick="toggle()"><i class="fas fa-chevron-circle-right"></i></a>
+            </div>     
+        </div> <span class=""></span>
+    </div>    
+            
+    <div class="container-fluid">
+        <main class="adjust-top" id="main">
+            <h3>Task List</h3>    
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <a href="add-category.html" class="btn btn-primary w-auto"><i class="fas fa-plus-circle mr-2"></i>Add Tasks</a>
+                    </div>
+                </div>  
+                <div class="row">
+                    <div class="col-md-4 pb-4">
+                        <div class="card">
+                            <div class="card-header bg-success font-weight-bold text-dark">Complete</div>
+                            <div class="card-body text-card">
+                                <div class="clearfix mb-3">
+                                    <div class="float-left">
+                                        <img src="images/user-w.png" alt="user" class="img-media rounded-circle">
+                                    </div>
+                                    <div class="float-left pl-3 pt-3">
+                                        <p class="mb-0 font-weight-normal">Name:</p>
+                                        <p class="font-weight-bold">John Doe</p>
+                                    </div>
+                                </div>
+                                <div class="clearfix">
+                                    <p class="font-weight-normal mb-0">Position:</p>
+                                    <p class="font-weight-bold indent">Web Designer</p>
+                                </div>
+                                <div class="clearfix">
+                                    <p class="font-weight-normal mb-0">Task:</p>
+                                    <p class="font-weight-bold indent">Configuring Cloud Database</p>
+                                </div>
+                                <div class="clearfix">
+                                    <p class="font-weight-normal mb-0">Date:</p>
+                                    <p class="font-weight-bold indent">December 19, 2019</p>
+                                </div>
+                                <hr class="m-0 pb-3">
+                                <div class="clearfix">
+                                    <div class="float-left">
+                                        <p class="mb-0 font-weight-normal">Approved by:</p>
+                                        <p class="font-weight-bold mb-0">Chris Doe</p>
+                                        <p>Supervisor</p>
+                                    </div>
+                                    <div class="float-right">
+                                        <p class="mb-0 font-weight-normal">Date Approved:</p>
+                                        <p class="font-weight-bold mb-0">December 10, 2019</p>
+                                        <p>11:00 AM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 pb-4">
+                        <div class="card">
+                            <div class="card-header bg-danger font-weight-bold text-dark">Not Complete</div>
+                            <div class="card-body text-card">
+                                <div class="clearfix mb-3">
+                                    <div class="float-left">
+                                        <img src="images/user-w.png" alt="user" class="img-media rounded-circle">
+                                    </div>
+                                    <div class="float-left pl-3 pt-3">
+                                        <p class="mb-0 font-weight-normal">Name:</p>
+                                        <p class="font-weight-bold">John Doe</p>
+                                    </div>
+                                </div>
+                                <div class="clearfix">
+                                    <p class="font-weight-normal mb-0">Position:</p>
+                                    <p class="font-weight-bold indent">Web Designer</p>
+                                </div>
+                                <div class="clearfix">
+                                    <p class="font-weight-normal mb-0">Task:</p>
+                                    <p class="font-weight-bold indent">Configuring Cloud Database</p>
+                                </div>
+                                <div class="clearfix">
+                                    <p class="font-weight-normal mb-0">Date:</p>
+                                    <p class="font-weight-bold indent">December 19, 2019</p>
+                                </div>
+                                <hr class="m-0 pb-3">
+                                <div class="clearfix">
+                                    <div class="float-left">
+                                        <p class="mb-0 font-weight-normal">Approved by:</p>
+                                        <p class="font-weight-bold mb-0">Chris Doe</p>
+                                        <p>Supervisor</p>
+                                    </div>
+                                    <div class="float-right">
+                                        <p class="mb-0 font-weight-normal">Date Approved:</p>
+                                        <p class="font-weight-bold mb-0">December 10, 2019</p>
+                                        <p>11:00 AM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 pb-4">
+                        <div class="card">
+                            <div class="card-header bg-warning font-weight-bold text-dark">Pending</div>
+                            <div class="card-body text-card">
+                                <div class="clearfix mb-3">
+                                    <div class="float-left">
+                                        <img src="images/user-w.png" alt="user" class="img-media rounded-circle">
+                                    </div>
+                                    <div class="float-left pl-3 pt-3">
+                                        <p class="mb-0 font-weight-normal">Name:</p>
+                                        <p class="font-weight-bold">John Doe</p>
+                                    </div>
+                                </div>
+                                <div class="clearfix">
+                                    <p class="font-weight-normal mb-0">Position:</p>
+                                    <p class="font-weight-bold indent">Web Designer</p>
+                                </div>
+                                <div class="clearfix">
+                                    <p class="font-weight-normal mb-0">Task:</p>
+                                    <p class="font-weight-bold indent">Configuring Cloud Database</p>
+                                </div>
+                                <div class="clearfix">
+                                    <p class="font-weight-normal mb-0">Date:</p>
+                                    <p class="font-weight-bold indent">December 19, 2019</p>
+                                </div>
+                                <hr class="m-0 pb-3">
+                                <div class="clearfix">
+                                    <div class="float-left">
+                                        <p class="mb-0 font-weight-normal">Approved by:</p>
+                                        <p class="font-weight-bold mb-0">Chris Doe</p>
+                                        <p>Supervisor</p>
+                                    </div>
+                                    <div class="float-right">
+                                        <p class="mb-0 font-weight-normal">Date Approved:</p>
+                                        <p class="font-weight-bold mb-0">December 10, 2019</p>
+                                        <p>11:00 AM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 pb-4">
+                        <div class="card">
+                            <div class="card-header bg-success font-weight-bold text-dark">Complete</div>
+                            <div class="card-body text-card">
+                                <div class="clearfix mb-3">
+                                    <div class="float-left">
+                                        <img src="images/user-w.png" alt="user" class="img-media rounded-circle">
+                                    </div>
+                                    <div class="float-left pl-3 pt-3">
+                                        <p class="mb-0 font-weight-normal">Name:</p>
+                                        <p class="font-weight-bold">John Doe</p>
+                                    </div>
+                                </div>
+                                <div class="clearfix">
+                                    <p class="font-weight-normal mb-0">Position:</p>
+                                    <p class="font-weight-bold indent">Web Designer</p>
+                                </div>
+                                <div class="clearfix">
+                                    <p class="font-weight-normal mb-0">Task:</p>
+                                    <p class="font-weight-bold indent">Configuring Cloud Database</p>
+                                </div>
+                                <div class="clearfix">
+                                    <p class="font-weight-normal mb-0">Date:</p>
+                                    <p class="font-weight-bold indent">December 19, 2019</p>
+                                </div>
+                                <hr class="m-0 pb-3">
+                                <div class="clearfix">
+                                    <div class="float-left">
+                                        <p class="mb-0 font-weight-normal">Approved by:</p>
+                                        <p class="font-weight-bold mb-0">Chris Doe</p>
+                                        <p>Supervisor</p>
+                                    </div>
+                                    <div class="float-right">
+                                        <p class="mb-0 font-weight-normal">Date Approved:</p>
+                                        <p class="font-weight-bold mb-0">December 10, 2019</p>
+                                        <p>11:00 AM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>      
+        </main>
+    </div>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="js/jquery.dataTables.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="js/dataTables.bootstrap4.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/all.js"></script>
+  </body>
+</html>
